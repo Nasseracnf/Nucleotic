@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    max-width: 100%;
+    font-size: 100%;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), local('Raleway-Regular'), url(../media/raleway.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/*-----------------------------Partie bleu-----------------------------*/
+
+.azur {
+    z-index: 5;
+    position: sticky;
+    width: 100vw;
+    height: 150vh;
+    background: #002f41;
+}
+
+/*-----------------------------Animation-----------------------------*/
+
+.bulles-animees {
+    width: 90vw;
+    height: 100wh;
+}
+
+.wt1 {
+    z-index: 10;
+    animation: bulles 17s linear alternate forwards;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    top: 0;
+    left: 0;
+}
+
+@keyframes bulles {
+    from {
+        transform: translateY(150vh);
+    }
+    33% {
+        transform: translateY(-150vh);
+    }
+    66% {
+        transform: translateY(150vh);
+    }
+    100% {
+        transform: translateY(-150vh);
+    }
+}
+
+.content {
+    position: absolute;
+    z-index: 4;
+    top: calc(45% - 7vh);
+    left: calc(50% - 16vw);
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.content>h1 {
+    margin-top: 3vh;
+    color: #ffffff;
+}
+
+.content>h2 {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    color: #00a6a6;
+}
+
+.content>a {
+    position: relative;
+    padding: 1vh;
+    font-size: 0.6em;
+    width: 12vw;
+    height: 5vh;
+    color: #fff;
+    text-decoration: none;
+    background-color: #dd5873;
+    border-radius: 5px;
+    top: 45vh;
+}
+
+/*-----------------------------Partie grise-----------------------------*/
+
+#logo {
+    top: 0;
+    z-index: 5;
+    margin: 1vw 0 0 5vw;
+    position: absolute;
+    width: 16vw;
+    height: 6vh;
+}
+
+.grise {
+    z-index: 20;
+    position: sticky;
+    background: #e0ded6;
+    width: 100vw;
+    height: 150vh;
+    padding: 0;
+}
+
+/* Partie centre haut de la section*/
+
+.upcenter {
+    position: relative;
+    letter-spacing: 0.5px;
+    text-align: center;
+    top: 20vh;
+    left: calc(50% - 25vw);
+    max-width: 50vw;
+}
+
+.upcenter>h1 {
+    font-size: 1.7vw;
+    text-transform: uppercase;
+    color: #4f4e4e;
+    font-weight: 500;
+    margin: 0 0 2vh 0;
+    line-height: 5vh;
+}
+
+.upcenter>p {
+    color: #00a8b4;
+    font-weight: bold;
+    font-size: smaller;
+}
+
+/*container gauche et droite*/
+
+.container {
+    display: flex;
+    position: relative;
+    top: 25vh;
+}
+
+.gauche {
+    width: 28%;
+    text-align: right;
+    margin: 4% 2% 4% 0;
+}
+
+.droite {
+    width: 32%;
+    text-align: left;
+    margin: 4% 0 4% 2%;
+}
+
+.gauche>h2, .droite>h2 {
+    /*uniquement texte h2 et p*/
+    font-size: normal;
+    color: #00a8b4;
+    text-transform: uppercase;
+}
+
+.gauche>p, .droite>p {
+    /*uniquement texte h2 et p*/
+    margin-bottom: 13vh;
+    color: #555555;
+    font-weight: 500;
+    line-height: 3vh;
+    font-size: smaller;
+}
+
+.gauche>h2, .gauche>p {
+    padding-left: 10vw;
+}
+
+.droite>h2, .droite>p {
+    padding-right: 10vw;
+}
+
+/*centre de container*/
+
+.centre {
+    position: relative;
+    width: 40%;
+    height: 85vh;
+}
+
+#cercle {
+    position: relative;
+    width: 75vw;
+    height: 75vh;
+    z-index: 5;
+    background-image: url("../nucleotic_donnees/overview-app.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#robot {
+    position: absolute;
+    z-index: 6;
+    height: 40vh;
+    top: 50%;
+}
+
+.container>.centre>a {
+    margin: 0;
+    padding: 1vh 2vw;
+    position: absolute;
+    font-size: 1em;
+    width: 6vw;
+    height: 5vh;
+    color: #fff;
+    text-decoration: none;
+    background-color: #dd5873;
+    border-radius: 2vh;
+    z-index: 7;
+    left: 40%;
+    top: 83%;
+    text-align: right;
+}
+
+/*-----------------------------Partie orange-----------------------------*/
+
+.naranja {
+    position: static;
+    background: #dd8f16;
+    width: 100vw;
+    height: 150vh;
+}
+
+.bord-haut {
+    background-color: #f0f0f0;
+}
+
+#logo2 {
+    position: relative;
+    margin: 1vw 0 2vh 8vw;
+    width: 16vw;
+    height: 6vh;
+}
+
+.naranja>h2 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.8vw;
+    font-weight: lighter;
+    margin: 10vh 0;
+    text-align: center;
+}
+
+/*-----------------------------Partie orange tableau-----------------------------*/
+
+.naranja>table>thead>tr>th {
+    font-size: 1.2vw;
+    font-weight: lighter;
+    text-align: center;
+    margin: 0;
+    padding: 2vh 0 0 0;
+}
+
+#fond-col {
+    position: relative;
+    width: 11.6vw;
+    height: 20vh;
+    margin: 0;
+    padding: 0;
+    top: 15vh;
+    left: 46.1vw;
+}
+
+#gift, #star, #check {
+    position: relative;
+    width: 2.5vw;
+    height: 3.5vh;
+    left: 46vw;
+    padding: 0 4.8vw;
+    margin-top: 3vh;
+}
+
+.fond-table {
+    z-index: 1;
+    position: absolute;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+em {
+    font-size: 0.5vw;
+    padding: 0;
+}
+
+.naranja>table>thead>tr>th:nth-child(n+2) {
+    font-size: 1vw;
+    font-weight: lighter;
+    text-transform: uppercase;
+    background-image: url("../nucleotic_donnees/features-header.png");
+    height: 15vh;
+}
+
+table {
+    color: #555;
+    width: 62vw;
+    margin-left: calc(52vw - 31vw);
+    border-spacing: 0.7vw 0;
+    table-layout: fixed;
+}
+
+th {
+    font-size: smaller;
+    font-weight: normal;
+    text-align: left;
+    padding: 1vh 3vw 1vh 2vw;
+    margin: 30px;
+}
+
+td {
+    font-size: 2vw;
+    padding: 1vh 1vw 1vh 7.5vw;
+}
+
+.naranja>table>tbody>tr:nth-child(odd)>th {
+    background-color: #fff;
+}
+
+.naranja>table>tbody>tr:nth-child(even)>th {
+    background-color: #f0f0f0;
+}
+
+.naranja>table>tbody>tr:nth-child(odd)>td:nth-child(2) {
+    background-color: #a7e1f8;
+}
+
+.naranja>table>tbody>tr:nth-child(even)>td:nth-child(2) {
+    background-color: #d3f0fb;
+}
+
+.naranja>table>tbody>tr:nth-child(odd)>td:nth-child(3) {
+    background-color: #7fd3d4;
+}
+
+.naranja>table>tbody>tr:nth-child(even)>td:nth-child(3) {
+    background-color: #bfe9e9;
+}
+
+.naranja>table>tbody>tr:nth-child(odd)>td:nth-child(4) {
+    background-color: #ecacb8;
+}
+
+.naranja>table>tbody>tr:nth-child(even)>td:nth-child(4) {
+    background-color: #f5d5dc;
+}
+
+tr:nth-child(n+5)>td:last-child>ul>li {
+    list-style-type: circle;
+    font-size: smaller;
+}
+
+.three-buttons>a {
+    position: relative;
+    float: left;
+    text-decoration: none;
+    background-color: #4fc3f1;
+    color: #fff;
+    font-size: 0.9vw;
+    text-transform: uppercase;
+    width: 6vw;
+    height: 4vh;
+    border-radius: 10px;
+    z-index: 3;
+    padding: 1vh 1vw 1vh 1.5vw;
+    margin: 2vh 1.8vw;
+    left: 46vw;
+}
+
+.three-buttons>a:nth-child(2) {
+    background-color: #00a7a9;
+}
+
+.three-buttons>a:nth-child(3) {
+    background-color: #d95972;
+}
+
+/*-----------------------------Partie violette-----------------------------*/
+
+.violeta {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(#5e327d, #81336f);
+    width: 100vw;
+    height: 75vh;
+    }
+
+.violeta > p {
+    color: #fff;
+
+}
+
+.violeta > div > img {
+    margin: 0;
+    background-color: #fff;
+    border-radius: 80px;
+    padding: 10px;
+    border: solid 20px #fff;
+}
+
+   /*-----------------------------Partie longue grise-----------------------------*/
+
+   .grise-longue {
+    background: #e0ded6;
+    width: 100vw;
+    height: 500vh;
+}
+
+.grise-longue-g {
+    position: absolute;
+    width: 50vw;
+    height: 500vh;
+    border-right: solid 0.2vw #b70100;
+}
+
+.grise-longue-d {
+    position: absolute;
+    width: 50vw;
+    height: 500vh;
+}
+
+    /*-----------------------------Partie vert-----------------------------*/
+
+.verde {
+    position: relative;
+    text-align: center;
+    background: #bfcf31;
+    width: 100vw;
+    height: 150vh;
+}
+
+.bord-haut2 {
+    background-color: #f0f0f0;
+    border-top: solid thin #bfcf31;
+}
+
+#logo3{
+    position: relative;
+    padding: 0;
+    margin: 1vw 0 2vh 8vw;
+    left: -37vw;
+    width: 16vw;
+    height: 6vh;
+} 
+
+.verde > h2 {
+    color: #fff;
+    font-size: 1.8vw;
+    font-weight: 400;
+    margin: 10vh 0;
+}
+
+.verde > p {
+    color: #fff;
+    font-size: 1vw;
+    margin: 10vh 15vw;
+    width: 70vw;
+}
+
+.verde > img {
+    width: 54vw;
+    height: 55vh;
+    margin-bottom: 4vh;
+}
+
+.dernier-bouton > a {
+    text-decoration: none;
+    position: absolute;
+    float: left;
+    background-color: #d95972;
+    color: #fff;
+    font-size: 1vw;
+    font-weight: 500;
+    width: 15vw;
+    height: 4vh;
+    border-radius: 12px;
+    z-index: 3;
+    padding: 1vh 0 0 0;
+    margin: 1.2vh 1.8vw;
+    left: 40vw;
+    top: 110vh;
+}
